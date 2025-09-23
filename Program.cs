@@ -46,7 +46,7 @@ class Program
         Console.WriteLine("Bem-Vindo ao Sistema de Cadastro de Livros, selecione uma opção: \n");
         Console.WriteLine("1 - Registrar Livro");
         Console.WriteLine("2 - Exibir Livros");
-        Console.WriteLine("4 - Sair");
+        Console.WriteLine("3 - Sair");
         Console.WriteLine("===========================================");
         Console.Write("Digite sua opção: ");
         if (int.TryParse(Console.ReadLine(), out int opcao))
