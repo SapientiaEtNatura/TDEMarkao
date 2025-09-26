@@ -47,6 +47,18 @@ namespace TDEMarkao
             }
         }
 
+        public string BuscarLivroPorTitulo()
+        {
+            Console.Write("Digite o título do livro que deseja buscar: ");
+            string titulo = Console.ReadLine();
+            var livro = livros.FirstOrDefault(l => l.Titulo.Equals(titulo, StringComparison.OrdinalIgnoreCase));
+            if (livro != null)
+            {
+                return $"Título: {livro.Titulo}, Autor: {livro.Autor}, Data de Publicação: {livro.DataPub}, Categoria: {livro.Categoria}, Número de Páginas: {livro.NumPagina}";
+            }
+            return "Livro não encontrado.";
+        }
+
 
 
 

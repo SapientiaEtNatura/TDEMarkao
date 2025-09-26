@@ -25,8 +25,13 @@ class Program
                     biblioteca.ListaLivros();
                     Pausar();
                     break;
+                
+                    case 3:
+                    Console.WriteLine(biblioteca.BuscarLivroPorTitulo());
+                    Pausar();
+                    break;
 
-                case 3:
+                case 4:
                     Console.WriteLine("Saindo do sistema...");
                     break;
                 default:
@@ -36,7 +41,7 @@ class Program
                     break;
             }
 
-        } while (opc != 3);
+        } while (opc != 4);
 
     }
     static int menuLib()
@@ -46,7 +51,8 @@ class Program
         Console.WriteLine("Bem-Vindo ao Sistema de Cadastro de Livros, selecione uma opção: \n");
         Console.WriteLine("1 - Registrar Livro");
         Console.WriteLine("2 - Exibir Livros");
-        Console.WriteLine("3 - Sair");
+        Console.WriteLine("3 - Buscar Livro por Título");
+        Console.WriteLine("4 - Sair");
         Console.WriteLine("===========================================");
         Console.Write("Digite sua opção: ");
         if (int.TryParse(Console.ReadLine(), out int opcao))
